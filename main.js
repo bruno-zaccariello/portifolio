@@ -4,7 +4,7 @@ function ToggleContent(id) {
 }
 
 function ScrollTo(id) {
-    $('html', 'body').animate({
+    $('html, body').animate({
         scrollTop: $("#"+id).offset().top - 75
     }, 700);
 };
