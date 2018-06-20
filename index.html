@@ -4,12 +4,14 @@
 	<head>
 		
 		<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Oswald|Roboto+Condensed" rel="stylesheet">
-	
 		<link rel="stylesheet" type="text/css" href="site.css">
+		
 		<title> Bruno Zaccariello </title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Bruno Zaccariello">
+		<meta name="keywords" content="HTML,CSS,JavaScript,Currículo,Bruno Zaccariello,Zaccariello, bzaccriello,
+			site,curriculo,cv,projeto,python,django">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="main.js"></script>
@@ -20,10 +22,19 @@
 	
 		<div id="menu_container" class="menu_container">
 			<nav class="menu_links">
-				<a href="javascript:ScrollTo('top')" class="menu_opt"><div class="menu_opt"> Home </div></a>
+				<a href="javascript:ScrollTo('top')" class="menu_opt"><div class="menu_opt"> Início </div></a>
 				<a href="javascript:ScrollTo('page_02')" class="menu_opt"><div class="menu_opt"> Sobre </div></a>
 				<a href="#contato" class="menu_opt"><div class="menu_opt"> Contato </div></a>
+				<a class="menu_opt mn_opt_lang"><div id="lang_div" onclick="change_lang_menu()" class="menu_opt"> PT-BR </div></a>
 			</nav>
+		</div>
+		
+		<div id="lang_menu" class="lang_menu">
+			<h3 id="lang_title" class="lang_title">Idioma</h3>
+			<div class="lang_content">
+				<div class="lang_opt" onclick="change_lang('PT-BR')">Português</div>
+				<div class="lang_opt" onclick="change_lang('EN')">Ingês</div>
+			</div>
 		</div>
 		
 		<div id="top" class="page">
@@ -40,47 +51,59 @@
 				</section>
 			</div>
 			
+			<div class="black_divisor"></div>
+			
 			<div id="page_02" class="cb page_02">
 				<section class="about_section">
 				
+					<div class="about_headings">
 					<h3 class="section_title">
 						Sobre
 					</h3>
+					<h4 class="section_subtitle">
+						About
+					</h4>
+					</div>
 
 					
-					<div id="sobre_content">
+					<div id="sobre_content" class="sobre_content">
 					<p>
 						Atualmente estudo Sistemas de Informação pela Faculdade Impacta Tecnologia, minha previsão de conclusão é
-						para o final de 2020. <br/> Após o término da faculdade, minha ideia é realizar uma pós em desenvolvimento
-						web e programação, pois são áreas nas quais eu me identifico bastante.
+						para o final do ano de 2020. Após o término da faculdade, minha ideia é realizar uma pós em desenvolvimento
+						web e alguns cursos sobre programação, pois são áreas nas quais eu me identifico bastante.
 						
 					</p>
 					
 					<p>
-						A ideia desse site é auxiliar na divulgação do meu trabalho, dando exemplos e informando meios de
-						comunicação, poderíamos chamar esse projeto de <i>site-currículo</i>.
+						<strong>Sobre mim: </strong> Possuo uma boa base de conhecimento em desenvolvimento web (<strong>HTML, CSS,
+						Javascript</strong>), no início aprendi pela faculdade, depois aperfeiçoei trabalhando em alguns projetos e
+						pela leitura de livros e matérias sobre. Os livros lidos são do da coleção de desenvolvimento web do
+						<a href="http://shop.oreilly.com/" target="_blank">O'Reilly</a>, que são referência na área de tecnologia.
+						Em relação ao <i>back-end</i> tenho conhecimentos sobre <strong>Python, Django e Banco de Dados (SQL, SQL Server, 
+						SQLite)</strong>, somando tudo é possível fazer um sistema totalmente funcional com nível de qualidade igual ou
+						superior às soluções do mercado. <b>Profissionalmente</b> busco sempre me manter organizado e busco entregar o melhor
+						resultado possível, aplicando metodologias de desenvolvimento modernas, para que o cliente fique totalmente satisfeito.
 					</p>
-				
-					<ul class="list_01">
-						<li><strong>Conhecimentos :</strong></li>
-						<ul class="knowledges">
-							<li>CSS</li>
-							<li>Django</li>
-							<li>HTML</li>
-							<li>Javascript</li>
-							<li>JQuery</li>
-							<li>Python</li>
-							<li>Python</li>
-							<li>Python</li>
-							<li>Python</li>
-							<li>Python</li>
-							<li>Python</li>
-							<li>Python</li>
-							<li>Python</li>
-							<li>Python</li>
-							<li>Python</li>
-						</ul>
-					</ul>
+					</div>
+					
+					<div id="sobre_content_eng" class="sobre_content" style="display:none">
+					<p>
+						Actually i'm studying Information Systems in Faculdade Impacta Tecnologia, I expect to finish the course by the
+						end of year 2020. After finishing the bachelor's degree I pretend to get a graduation degree on web development
+						and do some courses about programming, wich I relate the most.
+						
+					</p>
+					
+					<p>
+						<strong>About me: </strong>I have a good knowledge in web development, in the beggining I learned on the college,
+						then I improved them with some projects and books. The books that I read are from the web development collection by
+						<a href="http://shop.oreilly.com/" target="_blank">O'Reilly</a>, wich are references in the tecnology market.
+						My habilities in back-end involves <strong>Python, Django and Databases (SQL, SQL Server, SQLite)</strong>, 
+						and in front-end involves <strong>HTML, CSS and Javascript</strong> getting these all togheter 
+						it's possible to make totally functional systems that can have a quality level that's equal or better than the one
+						required by the market. <b>Professionally</b> I try to always keep things organized and always deliver the best result
+						possible, using the most modern development methods to always satisfy my client.
+					</p>
 					</div>
 			
 				</section>
