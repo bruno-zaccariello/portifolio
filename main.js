@@ -9,9 +9,13 @@ function ScrollTo(id) {
     }, 700);
 };
 
-function change_lang_menu(speed=200) {
-	$('#lang_menu').fadeToggle(speed);
-}
+function change_lang_menu(speed=200, operation='') {
+	if (operation == 'close') {
+		$('#lang_menu').fadeOut(speed);
+	} else {
+		$('#lang_menu').fadeToggle(speed);
+		}
+	}
 
 function change_lang(lang) {
 	var menu = document.querySelectorAll("div.menu_opt");;

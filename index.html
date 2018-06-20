@@ -21,15 +21,16 @@
 	<body>
 	
 		<div id="menu_container" class="menu_container">
-			<nav class="menu_links">
-				<a href="javascript:ScrollTo('top')" class="menu_opt"><div class="menu_opt"> Início </div></a>
-				<a href="javascript:ScrollTo('page_02')" class="menu_opt"><div class="menu_opt"> Sobre </div></a>
-				<a href="#contato" class="menu_opt"><div class="menu_opt"> Contato </div></a>
-				<a class="menu_opt mn_opt_lang"><div id="lang_div" onclick="change_lang_menu()" class="menu_opt"> PT-BR </div></a>
-			</nav>
+			<div class="menu_links">
+				<div onclick="ScrollTo('top')" class="menu_opt"> Início </div>
+				<div onclick="ScrollTo('page_02')" class="menu_opt"> Sobre </div>
+				<div onclick="ScrollTo('page_03')" class="menu_opt"> Contato </div>
+				<div id="lang_div" onclick="change_lang_menu()" class="menu_opt mn_opt_lang"> PT-BR </div>
+			</div>
 		</div>
 		
 		<div id="lang_menu" class="lang_menu">
+			<div class="close" onclick="change_lang_menu(200, 'close')">x</div>
 			<h3 id="lang_title" class="lang_title">Idioma</h3>
 			<div class="lang_content">
 				<div class="lang_opt" onclick="change_lang('PT-BR')">Português</div>
@@ -56,13 +57,13 @@
 			<div id="page_02" class="cb page_02">
 				<section class="about_section">
 				
-					<div class="about_headings">
-					<h3 class="section_title">
-						Sobre
-					</h3>
-					<h4 class="section_subtitle">
-						About
-					</h4>
+					<div class="headings">
+						<h3 class="section_title">
+							Sobre
+						</h3>
+						<h4 class="section_subtitle">
+							About
+						</h4>
 					</div>
 
 					
@@ -75,12 +76,13 @@
 					</p>
 					
 					<p>
-						<strong>Sobre mim: </strong> Possuo uma boa base de conhecimento em desenvolvimento web (<strong>HTML, CSS,
-						Javascript</strong>), no início aprendi pela faculdade, depois aperfeiçoei trabalhando em alguns projetos e
+						<strong>Sobre mim: </strong> Possuo uma boa base de conhecimento em desenvolvimento web, no início aprendi pela faculdade, 
+						depois aperfeiçoei trabalhando em alguns projetos e
 						pela leitura de livros e matérias sobre. Os livros lidos são do da coleção de desenvolvimento web do
 						<a href="http://shop.oreilly.com/" target="_blank">O'Reilly</a>, que são referência na área de tecnologia.
 						Em relação ao <i>back-end</i> tenho conhecimentos sobre <strong>Python, Django e Banco de Dados (SQL, SQL Server, 
-						SQLite)</strong>, somando tudo é possível fazer um sistema totalmente funcional com nível de qualidade igual ou
+						SQLite)</strong> e em relação ao <i>front-end</i> <strong>HTML, CSS, Javascript</strong> 
+						somando tudo é possível fazer um sistema totalmente funcional com nível de qualidade igual ou
 						superior às soluções do mercado. <b>Profissionalmente</b> busco sempre me manter organizado e busco entregar o melhor
 						resultado possível, aplicando metodologias de desenvolvimento modernas, para que o cliente fique totalmente satisfeito.
 					</p>
@@ -109,15 +111,34 @@
 				</section>
 			</div>
 		
-			<div class="cb page_03">
+			<div class="black_divisor"></div>
+		
+			<div id="page_03" class="cb page_03">
 				<section class="contact_section">
-						<h1 class="">
+					
+					<div class="headings">
+						<h3 class="section_title">
 							Contato
-						</h1>
-						
-						<h2 class="">
-							BLEH
-						</h2>
+						</h3>
+						<h4 class="section_subtitle">
+							Contact
+						</h4>
+					</div>
+					
+					<div class="media_container">
+						<div class="media_box">
+							<div class="media_it">
+								<strong>Telefone :</strong> (11)94012-1377
+							</div>
+							<div class="media_it">
+								<strong>E-Mail :</strong> brukzz90@gmail.com
+							</div>
+							<div class="media_it">
+								<strong>Telefone :</strong> (11)940121377
+							</div>
+						</div>
+					</div>
+				
 				</section>
 			</div>
 		
