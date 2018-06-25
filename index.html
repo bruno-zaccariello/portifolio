@@ -46,13 +46,23 @@
 			<div class="menu_bt_bar"></div>
 		</div>
 		
-		<div id="menu_container" class="menu_container">
+		<div id="menu_container_pt" class="menu_container">
 			<div class="menu_links">
 				<div onclick="ScrollTo('top')" class="menu_opt"> Início </div>
 				<div onclick="ScrollTo('page_02')" class="menu_opt"> Sobre </div>
 				<div onclick="ScrollTo('page_03')" class="menu_opt"> Projetos </div>
 				<div onclick="ScrollTo('page_04')" class="menu_opt"> Contato </div>
 				<div id="lang_div" onclick="change_lang_menu()" class="menu_opt mn_opt_lang"> PT-BR </div>
+			</div>
+		</div>
+		
+		<div id="menu_container_en" class="menu_container" style="display:none">
+			<div class="menu_links">
+				<div onclick="ScrollTo('top')" class="menu_opt"> Home </div>
+				<div onclick="ScrollTo('page_02')" class="menu_opt"> About </div>
+				<div onclick="ScrollTo('page_03')" class="menu_opt"> Projects </div>
+				<div onclick="ScrollTo('page_04')" class="menu_opt"> Contact </div>
+				<div id="lang_div" onclick="change_lang_menu()" class="menu_opt mn_opt_lang"> EN-US </div>
 			</div>
 		</div>
 		
@@ -154,7 +164,7 @@
 						</h4>
 					</div>
 					
-					<div class="projects_box">
+					<div class="projects_box_desktop">
 					
 					<div id="card_scene_01" class="card_scene">
 						<div class="card">
@@ -164,17 +174,79 @@
 								<p class="p_front">
 									Sistema de Gerenciamento Empresarial voltado para fabricação de essências de <i>narguilé</i>.
 									Este projeto é parte da Oficina Projeto de Empresa da Faculdade Impacta Tecnologia que substitui
-									o TCC de ADS no curso de Sistemas de Informação.
+									o TCC de ADS no curso de Sistemas de Informação. <br/><br/><b>Django, Python, HTML, CSS, JS, MySQL (diversas bibliotecas
+									inclusas)</b>
 								</p>
 								
 								<span>Clique para ver mais</span>
 							</div>
 							<div class="card_face card_back">
 								<p class="p_back">
-									Este sistema é parte da Oficina Projeto Empresa da Faculdade Impacta, nele tivemos que
-									buscar um cliente real e trazer uma solução para o mesmo.
+									Este projeto, apesar de fazer parte do método de avaliação da faculdade, é baseado em uma necessidade
+									real de um cliente real. Nosso cliente atualmente deseja investir em um modelo de negócio um tanto quanto 
+									não convencional, que é a fabricação e venda de essências para narguilé. Por ser um modelo de negócio fora
+									do padrão, nosso cliente necessitava um sistema feito sob medida, pois as soluções padrões do mercado não o 
+									atendia totalmente. Utilizamos os melhores métodos de desenvolvimento para que o cliente receba
+									sua solução de forma rápida e segura.
 								</p>
 								<a href="https://github.com/SpaceTheArcher/SGEHookah" target="_blank">
+									Github
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div id="card_scene_02" class="card_scene">
+						<div class="card">
+							<div class="card_face card_front">
+								<h5>Tabela Copa</h5>
+								
+								<p class="p_front">
+									Sistema Web para gravar informações das partidas na copa do mundo de 2018. Projeto realizado apenas para fins
+									de aprendizado, com o principal intuíto de facilitar a gravação dos resultados da copa com um sistema feito por mim.
+									<br/><br/><b>Django, Python, HTML, CSS e SQLServer</b>
+								</p>
+								
+								<span>Clique para ver mais</span>
+							</div>
+							<div class="card_face card_back">
+								<p class="p_back">
+									Este projeto surgiu da vontade em aprender. Nesta copa, assim como nas outras, a tabela em papel é algo que muitas
+									pessoas usam para gravar os resultados, pois é algo divertido ir assistindo às partidas e marcando os resultados você
+									mesmo. Um problema nessa abordagem é que podemos perder o papel, ele pode estragar, entre diversos problemas. Partindo
+									desse principio pensei em fazer o mesmo sistema digitalizado, onde eu poderia acessar em qualquer lugar e à qualquer hora.
+									(<b>Sistema em construção, ainda tenho alguns planos futuros</b>)
+								</p>
+								<a href="http://tabelacopa.azurewebsites.net" target="_blank">
+									Tabela Copa
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div id="card_scene_03" class="card_scene">
+						<div class="card">
+							<div class="card_face card_front">
+								<h5>Sistema LMS</h5>
+								
+								<p class="p_front">
+									Sistema LMS (Learning Management System) realizado como avaliação para o segundo semestre do curso de Sistemas de Informação
+									pela Faculdade Impacta.
+									<br/><br/>
+									(<b>Django, Python, HTML, CSS e SQLite</b>)
+								</p>
+								
+								<span>Clique para ver mais</span>
+							</div>
+							<div class="card_face card_back">
+								<p class="p_back">
+									O sistema LMS é uma plataforma de aprendizado, onde existem 3 perfis, Coordenadores, Professores e Alunos. Nesta plataforma
+									o aluno pode aprender com aulas e exercícios publicados pelo Professor, que irá corrigir e dar nota para os alunos de acordo
+									com suas respostas. Enquanto isso o coordenador poderá cadastrar turmas, alunos, professores e fazer toda a manutenção da plataforma.
+									Minha versão do sistema contempla todas essas funcionalidades, exceto o gerenciamento de notas, e ainda inclui Avisos e Mensagens,
+									além da honra em ter recebido nota máxima pelos professores avaliadores.
+								</p>
+								<a href="http://tabelacopa.azurewebsites.net" target="_blank">
 									Github
 								</a>
 							</div>

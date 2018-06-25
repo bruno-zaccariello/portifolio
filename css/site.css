@@ -52,7 +52,7 @@ a:hover {
 
 /* CARDS */
 
-.projects_box {
+.projects_box_desktop {
 	top: 30%;
 	left: 0;
 	right: 0;
@@ -61,14 +61,16 @@ a:hover {
 	justify-content: space-evenly;
 	margin: auto;
 	position: absolute;
-	width: 80%;
+	width: 100%;
 }
 
 .card_scene {
+	color: black;
 	cursor: pointer;
 	height: 300px;
 	perspective: 1000px;
 	width: 20%;
+	min-width: 300px;
 }
 
 .card_scene * {
@@ -87,16 +89,22 @@ a:hover {
 .card span {
 	margin-top: auto;
 	margin-bottom: 5px;
-	color: lightblue;
+	color: darkblue;
 	cursor: pointer;
 }
 
 .card a {
+	font-weight: 600;
+	color: blue;
 	cursor: pointer;
 }
 
+.card a:hover {
+	color: darkblue;
+}
+
 .card p {
-	font-size: 15px;
+	font-size: 14px;
 }
 
 .p_front {
@@ -112,7 +120,11 @@ a:hover {
 }
 
 .card_face {
+	background-color: #ddd;
+	background-color: rgba(221,221,221,.5);
+	border-radius: 10px;
 	backface-visibility: hidden;
+	box-shadow: 2px 5px 10px 0 black;
 	height: 100%;
 	padding: 10px;
 	position: absolute;
@@ -121,23 +133,21 @@ a:hover {
 }
 
 .card_front {
-	border: 1px solid white;
-	border-radius: 10px;
+	border: 3px solid white;
 }
 
 .card_scene:hover .card_front{
-	border: 1px solid lightblue;
+	border-color: #bbb;
 	transition: 0s;
 }
 
 .card_back {
-	border: 1px solid black;
-	border-radius: 10px;
+	border: 3px solid #444;
 	transform: rotateY(180deg);
 }
 
 .card_scene:hover .card_back{
-	border: 1px solid darkblue;
+	border-color: black;
 	transition: 0s;
 }
 
@@ -157,7 +167,6 @@ a:hover {
 	flex-flow: column nowrap;
 	height: 60px;
 	justify-content: center;
-	padding: 5px 20px;
 	text-align: center;
 	transition: 0;
 	width: 100px;

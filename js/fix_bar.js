@@ -2,9 +2,9 @@ window.onscroll = function() {scrollMagic()};
 
 function scrollMagic() {
 	if ($(window).scrollTop() >= 70) {
-		$('#menu_container').addClass('menu_fix');
+		$('.menu_container').addClass('menu_fix');
 	} else {
-		$('#menu_container').removeClass('menu_fix');
+		$('.menu_container').removeClass('menu_fix');
 	}
 	$('.cb').each(function () {
 		var janela = $(window).scrollTop()
