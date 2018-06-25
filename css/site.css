@@ -21,6 +21,11 @@ h4 {
 	margin: auto;
 }
 
+h5 {
+	font-size: 22px;
+	margin: 20px auto;
+}
+
 p {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 18px;
@@ -45,6 +50,97 @@ a:hover {
 	color: blue;
 }
 
+/* CARDS */
+
+.projects_box {
+	top: 30%;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	margin: auto;
+	position: absolute;
+	width: 80%;
+}
+
+.card_scene {
+	cursor: pointer;
+	height: 300px;
+	perspective: 1000px;
+	width: 20%;
+}
+
+.card_scene * {
+	cursor: default;
+}
+
+.card {
+	height: 100%;
+	position: relative;
+	transition: .8s;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	width: 100%;
+}
+
+.card span {
+	margin-top: auto;
+	margin-bottom: 5px;
+	color: lightblue;
+	cursor: pointer;
+}
+
+.card a {
+	cursor: pointer;
+}
+
+.card p {
+	font-size: 15px;
+}
+
+.p_front {
+	height: 60%;
+}
+
+.p_back {
+	height: 80%;
+}
+
+.card.is-flipped {	
+	transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card_face {
+	backface-visibility: hidden;
+	height: 100%;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.card_front {
+	border: 1px solid white;
+	border-radius: 10px;
+}
+
+.card_scene:hover .card_front{
+	border: 1px solid lightblue;
+	transition: 0s;
+}
+
+.card_back {
+	border: 1px solid black;
+	border-radius: 10px;
+	transform: rotateY(180deg);
+}
+
+.card_scene:hover .card_back{
+	border: 1px solid darkblue;
+	transition: 0s;
+}
+
 /* Menu */
 
 .phone_menu_bt {
@@ -65,6 +161,10 @@ a:hover {
 	text-align: center;
 	transition: 0;
 	width: 100px;
+}
+
+.mn_opt_lang_smart {
+	display: none;
 }
 
 .menu_opt:hover {
@@ -124,9 +224,11 @@ a:hover {
 }
 
 section {
-	margin: 0 auto;
+	color: white;
 	height: 100vh;
-	width: 80%;
+	position: relative;
+	margin: auto;
+	width: 100%;
 }
 
 /* Classes */
@@ -242,18 +344,14 @@ section {
 }
 
 .page_03 {
+	background-color: #466ea0;
+}
+
+.page_04 {
 	background-color: #7295c1;
 }
 
 /* Main Page (page 1)*/
-
-.main_section {
-	color: white;
-	height: 100%;
-	position: relative;
-	margin: auto;
-	width: 100%;
-}
 
 .main_title {
 	font-size: 50px;
@@ -275,14 +373,6 @@ section {
 
 /* About Page (page 2)*/
 
-.about_section {
-	color: white;
-	height: 100%;
-	position: relative;
-	margin: auto;
-	width: 100%;
-}
-
 .section_title {
 	font-size: 50px;
 	margin: auto;
@@ -295,7 +385,8 @@ section {
 
 .sobre_content {
 	top: 30%;
-	left: 25%;
+	left: 0;
+	right: 0;
 	font-size: 18px;
 	margin: auto;
 	position: absolute;
@@ -304,14 +395,6 @@ section {
 }
 
 /* Contato */
-
-.contact_section {
-	color: white;
-	height: 100%;
-	position: relative;
-	margin: auto;
-	width: 100%;
-}
 
 .media_container_pt {
 	top: 30%;
@@ -352,6 +435,7 @@ section {
 
 .media_name {
 	width: 30%;
+	min-width: 75px;
 }
 
 .media_content {
@@ -359,6 +443,7 @@ section {
 	color: black;
 	font-weight: 600;
 	width: 70%;
+	min-width: 185px;
 }
 
 .media_it_margin {
@@ -402,12 +487,11 @@ section {
 	display: none;
 }
 
-@media screen and (min-width: 1500px) {
-	body {
-	}
-}
-
 @media screen and (max-width: 1000px) {
+
+	section {
+		position: static;
+	}
 
 	.page {
 		margin-top: 30px;
@@ -441,6 +525,35 @@ section {
 		margin: auto;
 	}
 	
+	.mn_opt_lang {
+		display: none;
+	}
+	
+	.mn_opt_lang_smart {
+		background-color: black;
+		border-radius: 50%;
+		bottom: 0;
+		color: white;
+		display: flex;
+		font-size: 12px;
+		flex-flow: column nowrap;
+		height: 40px;
+		justify-content: center;
+		left: 0;
+		margin: auto 15px 5px auto;
+		text-align: center;
+		position: fixed;
+		padding: 0;
+		right: 0;
+		top: 0;
+		width: 40px;	
+	}
+	
+	.mn_opt_lang_smart:hover, .mn_opt_lang_smart:hover {
+		background-color: white;
+		color: black;
+	}
+	
 	section {
 		margin: 0 auto;
 		height: 100vh;
@@ -449,10 +562,6 @@ section {
 
 	p {
 		font-size: 15px;
-	}
-	
-	.about_section {
-		position: static;
 	}
 	
 	.headings {
@@ -473,10 +582,6 @@ section {
 	.sobre_content {
 		position: static;
 		width: 80vw;
-	}
-
-	.contact_section {
-		position: static;
 	}
 
 	.media_container_pt {
