@@ -23,5 +23,6 @@ function scrollMagic() {
 $('.card').each(function() {
 	$(this).click(function() {
 		$(this).toggleClass('is-flipped');
+		$(this).parent().toggleClass('is-flipped');
 	})
 })

@@ -52,7 +52,7 @@ a:hover {
 
 /* CARDS */
 
-.projects_box_desktop {
+.projects_box_pt {
 	top: 30%;
 	left: 0;
 	right: 0;
@@ -95,12 +95,12 @@ a:hover {
 
 .card a {
 	font-weight: 600;
-	color: blue;
-	cursor: pointer;
+	color: rgb(50,50,250);
+	cursor: pointer
 }
 
 .card a:hover {
-	color: darkblue;
+	color: rgb(0,0,50);
 }
 
 .card p {
@@ -496,10 +496,22 @@ section {
 	display: none;
 }
 
+.smart_leg {
+	display: none;
+}
+
 @media screen and (max-width: 1000px) {
 
 	section {
 		position: static;
+		margin: 0 auto;
+		height: 100vh;
+		width: 100%;
+	}
+	
+	.cb {
+		position: static;
+		width: 100vw;
 	}
 
 	.page {
@@ -561,12 +573,6 @@ section {
 	.mn_opt_lang_smart:hover, .mn_opt_lang_smart:hover {
 		background-color: white;
 		color: black;
-	}
-	
-	section {
-		margin: 0 auto;
-		height: 100vh;
-		width: 100vw;
 	}
 
 	p {
@@ -634,6 +640,86 @@ section {
 	
 	.phone_hide {
 		display: none;
+	}
+
+	.projects_box_pt {
+		flex-flow: column nowrap;
+		justify-content: start;
+		position: static;
+		width: 90%;
+	}
+	
+	.card_scene {
+		height: 80px;
+		margin: 20px auto;
+		transition: .5s;
+		width: 100%;
+	}
+	
+	.card {
+		height: 100%;
+		position: relative;
+	}
+	
+	.card h5 {
+		font-size: 18px;
+		margin: 5px auto;
+	}
+	
+	.p_front {
+		display: none;
+		height: 60%;
+	}
+
+	.p_back {
+		display: none;
+		height: 85%;
+	}
+	
+	.card_face {
+		background-color: #ddd;
+		background-color: rgba(221,221,221,.5);
+		border-radius: 10px;
+		backface-visibility: hidden;
+		box-shadow: 2px 5px 10px 0 black;
+		height: 100%;
+		padding: 10px;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+	}
+	
+	.card_scene.is-flipped {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		
+		margin: auto;
+		
+		height: 60vh;
+		width: 80vw;
+		z-index: 2;
+	}
+	
+	.card_scene.is-flipped .p_back {
+		display: block;
+	}
+	
+	.card_scene.is-flipped .card .card_face {
+		background-color: #ddd;
+		background-color: rgba(221,221,221,1);
+	}
+	
+	.card.is-flipped {
+		margin: auto;
+		height: 100%;
+		width: 100%;
+	}
+
+	.smart_leg {
+		display: block;
 	}
 	
 }
