@@ -661,6 +661,10 @@ section {
 		position: relative;
 	}
 	
+	.card p {
+		font-size: 16px;
+	}
+	
 	.card h5 {
 		font-size: 18px;
 		margin: 5px auto;
