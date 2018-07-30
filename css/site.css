@@ -263,6 +263,19 @@ section {
 	margin-top: 5px;
 }
 
+.dark_bg {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	opacity: .6;
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: -1;
+}
+
 .lang_menu {
 	background-color: black;
 	background-color: rgba(0,0,0,.9);
@@ -423,6 +436,7 @@ section {
 }
 
 .media_box {
+	background-color: rgba(255,255,255,.2);
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -435,11 +449,12 @@ section {
 }
 
 .media_it {
+	color: darkblue;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 	margin: 0 auto;
-	width: 35%;
+	width: 55%;
 }
 
 .media_name {
@@ -456,7 +471,6 @@ section {
 }
 
 .media_it_margin {
-	color: white;
 	font-weight: 600;
 	margin: 25px auto 15px;
 }
@@ -497,6 +511,18 @@ section {
 }
 
 .smart_leg {
+	display: none;
+}
+
+.pc {
+	display: block;
+}
+
+.smart {
+	display: none;
+}
+
+.tiny {
 	display: none;
 }
 
@@ -567,7 +593,8 @@ section {
 		padding: 0;
 		right: 0;
 		top: 0;
-		width: 40px;	
+		width: 40px;
+		z-index: 1;	
 	}
 	
 	.mn_opt_lang_smart:hover, .mn_opt_lang_smart:hover {
@@ -633,7 +660,6 @@ section {
 	}
 
 	.media_it_margin {
-		color: white;
 		font-weight: 600;
 		margin: 25px auto 15px;
 	}
@@ -653,9 +679,23 @@ section {
 		height: 80px;
 		margin: 20px auto;
 		transition: .5s;
+		min-width: 0;
 		width: 100%;
 	}
 	
+	.dark_bg_card {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: black;
+		opacity: .6;
+		height: 100%;
+		position: fixed;
+		width: 100%;
+		z-index: 1;
+	}
+
 	.card {
 		height: 100%;
 		position: relative;
@@ -725,5 +765,28 @@ section {
 	.smart_leg {
 		display: block;
 	}
+
+	.pc {
+		display: none;
+	}
+
+	.smart {
+		display: block;
+	}
+
+	.card_scene.is-flipped .p_back.tiny {
+		display: none;
+	}
 	
+}
+
+@media screen and (max-width: 380px) {
+	
+	.card_scene.is-flipped .p_back.pc {
+		display: none;
+	}
+
+	.tiny {
+		display: block;
+	}
 }

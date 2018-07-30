@@ -19,24 +19,16 @@ function change_lang_menu(speed=200, operation='') {
 
 function change_lang(lang) {
 	if (lang == 'PT-BR') {
-		$('#menu_container_en').fadeOut(1);
-		$('#menu_container_pt').fadeIn(500);
+		$("[lang='en']").fadeOut(1);
+		$("[lang='pt']").fadeIn(500);
 		$('#lang_div_smart').html('PT-BR');
 		$('#lang_title').html('Idioma');
-		$('#sobre_content_eng').fadeOut(1);
-		$('#sobre_content').fadeIn(500);
-		$('#media_container_en').fadeOut(1);
-		$('#media_container_pt').fadeIn(500);
 		change_lang_menu(1);
 	} else if (lang == 'EN') {
-		$('#menu_container_pt').fadeOut(1);
-		$('#menu_container_en').fadeIn(500);
+		$("[lang='pt']").fadeOut(1);
+		$("[lang='en']").fadeIn(500);
 		$('#lang_div_smart').html('EN-US');
 		$('#lang_title').html('Language');
-		$('#sobre_content').fadeOut(1);
-		$('#sobre_content_eng').fadeIn(500);
-		$('#media_container_pt').fadeOut(1);
-		$('#media_container_en').fadeIn(500);
 		change_lang_menu(1);
 	}
 }

@@ -57,6 +57,7 @@
 	</head>
 
 	<body>
+		<span id="lock_scroll" class="unlock"></span>
 	
 		<div class="phone_menu_bt">
 			<div class="menu_bt_bar"></div>
@@ -64,7 +65,7 @@
 			<div class="menu_bt_bar"></div>
 		</div>
 		
-		<div id="menu_container_pt" class="menu_container">
+		<div lang="pt" class="menu_container">
 			<div class="menu_links">
 				<div onclick="ScrollTo('top')" class="menu_opt"> Início </div>
 				<div onclick="ScrollTo('page_02')" class="menu_opt"> Sobre </div>
@@ -74,7 +75,7 @@
 			</div>
 		</div>
 		
-		<div id="menu_container_en" class="menu_container" style="display:none">
+		<div lang="en" class="menu_container" style="display:none">
 			<div class="menu_links">
 				<div onclick="ScrollTo('top')" class="menu_opt"> Home </div>
 				<div onclick="ScrollTo('page_02')" class="menu_opt"> About </div>
@@ -87,11 +88,12 @@
 		<div id="lang_div_smart" onclick="change_lang_menu()" class="mn_opt_lang_smart"> PT-BR </div>
 		
 		<div id="lang_menu" class="lang_menu">
+			<div class="dark_bg"></div>
 			<div class="close" onclick="change_lang_menu(200, 'close')">x</div>
 			<h3 id="lang_title" class="lang_title">Idioma</h3>
 			<div class="lang_content">
 				<div class="lang_opt" onclick="change_lang('PT-BR')">Português</div>
-				<div class="lang_opt" onclick="change_lang('EN')">Ingês</div>
+				<div class="lang_opt" onclick="change_lang('EN')">Inglês</div>
 			</div>
 		</div>
 		
@@ -124,7 +126,7 @@
 					</div>
 
 					
-					<div id="sobre_content" class="sobre_content">
+					<div lang="pt" class="sobre_content">
 					<p>
 						Atualmente estudo Sistemas de Informação pela Faculdade Impacta Tecnologia, minha previsão de conclusão é
 						para o final do ano de 2020. Após o término da faculdade, minha ideia é realizar uma pós em desenvolvimento
@@ -145,7 +147,7 @@
 					</p>
 					</div>
 					
-					<div id="sobre_content_eng" class="sobre_content" style="display:none">
+					<div lang="en" class="sobre_content" style="display:none">
 					<p>
 						Actually i'm studying Information Systems in Faculdade Impacta Tecnologia, I expect to finish the course by the
 						end of year 2020. After finishing the bachelor's degree I pretend to get a graduation degree on web development
@@ -182,99 +184,201 @@
 						</h4>
 					</div>
 					
-					<div class="projects_box_pt">
+					<div id="card_bg" class="dark_bg_card" style="display: none"></div>
 					
-					<div id="card_scene_01" class="card_scene">
-						<div class="card">
-							<div class="card_face card_front">
-								<h5>SGE Hookah</h5>
-								
-								<p class="p_front">
-									Sistema de Gerenciamento Empresarial voltado para fabricação de essências de <i>narguilé</i>.
-									Este projeto é parte da Oficina Projeto de Empresa da Faculdade Impacta Tecnologia que substitui
-									o TCC de ADS no curso de Sistemas de Informação. <br/><br/><b>Django, Python, HTML, CSS, JS, MySQL (diversas bibliotecas
-									inclusas)</b>
-								</p>
-								
-								<span>Clique para ver mais</span>
-							</div>
-							<div class="card_face card_back">
-								<p class="p_back">
-									Este projeto, apesar de fazer parte do método de avaliação da faculdade, é baseado em uma necessidade
-									real de um cliente real. Nosso cliente atualmente deseja investir em um modelo de negócio um tanto quanto 
-									não convencional, que é a fabricação e venda de essências para narguilé. Por ser um modelo de negócio fora
-									do padrão, nosso cliente necessitava um sistema feito sob medida, pois as soluções padrões do mercado não o 
-									atendia totalmente. Utilizamos os melhores métodos de desenvolvimento para que o cliente receba
-									sua solução de forma rápida e segura.
-									<br/><br/>
-									<b class="smart_leg">Django, Python, HTML, CSS, JS, MySQL (diversas bibliotecas inclusas)</b>
-								</p>
-								<a href="https://github.com/SpaceTheArcher/SGEHookah" target="_blank">
-									Github
-								</a>
+					<div lang="pt" class="projects_box_pt">
+
+						<div class="card_scene">
+							<div class="card">
+								<div class="card_face card_front">
+									<h5>SGE Hookah</h5>
+									
+									<p class="p_front">
+										Sistema de Gerenciamento Empresarial voltado para fabricação de essências de <i>narguilé</i>.
+										Este projeto é parte da Oficina Projeto de Empresa da Faculdade Impacta Tecnologia que substitui
+										o TCC de ADS no curso de Sistemas de Informação. <br/><br/><b>Django, Python, HTML, CSS, JS, PostgreSQL (diversas bibliotecas
+										inclusas)</b>
+									</p>
+									
+									<span>Clique para ver mais</span>
+								</div>
+								<div class="card_face card_back">
+									<p class="p_back pc">
+										Este projeto, apesar de fazer parte do método de avaliação da faculdade, é baseado em uma necessidade
+										real de um cliente real. Nosso cliente atualmente deseja investir em um modelo de negócio um tanto quanto 
+										não convencional, que é a fabricação e venda de essências para narguilé. Por ser um modelo de negócio fora
+										do padrão, nosso cliente necessitava um sistema feito sob medida, pois as soluções padrões do mercado não o 
+										atendia totalmente. Utilizamos os melhores métodos de desenvolvimento para que o cliente receba
+										sua solução de forma rápida e segura.
+										<br/><br/>
+										<b class="smart_leg">Django, Python, HTML, CSS, JS, PostgreSQL (diversas bibliotecas inclusas)</b>
+									</p>
+									<p class="p_back tiny">
+										ERP voltado para fabricação de essências de narguilé. Feito em Django, Python, HTML, CSS, JS, PostgreSQL.
+									</p>
+									<a href="https://github.com/SpaceTheArcher/SGEHookah" target="_blank">
+										Github
+									</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					
-					<div id="card_scene_02" class="card_scene">
-						<div class="card">
-							<div class="card_face card_front">
-								<h5>Tabela Copa</h5>
-								
-								<p class="p_front">
-									Sistema Web para gravar informações das partidas na copa do mundo de 2018. Projeto realizado apenas para fins
-									de aprendizado, com o principal intuíto de facilitar a gravação dos resultados da copa com um sistema feito por mim.
-									<br/><br/><b>Django, Python, HTML, CSS e SQLServer</b>
-								</p>
-								
-								<span>Clique para ver mais</span>
-							</div>
-							<div class="card_face card_back">
-								<p class="p_back">
-									Este projeto surgiu da vontade em aprender. Nesta copa, assim como nas outras, a tabela em papel é algo que muitas
-									pessoas usam para gravar os resultados, pois é algo divertido ir assistindo às partidas e marcando os resultados você
-									mesmo. Um problema nessa abordagem é que podemos perder o papel, ele pode estragar, entre diversos problemas. Partindo
-									desse principio pensei em fazer o mesmo sistema digitalizado, onde eu poderia acessar em qualquer lugar e à qualquer hora.
-									(<b>Sistema em construção, ainda tenho alguns planos futuros</b>)
-									<br/><br/><b class="smart_leg">Django, Python, HTML, CSS e SQLServer</b>
-								</p>
-								<a href="http://tabelacopa.azurewebsites.net" target="_blank">
-									Tabela Copa
-								</a>
-							</div>
-						</div>
-					</div>
-					
-					<div id="card_scene_03" class="card_scene">
-						<div class="card">
-							<div class="card_face card_front">
-								<h5>Sistema LMS</h5>
-								
-								<p class="p_front">
-									Sistema LMS (Learning Management System) realizado como avaliação para o segundo semestre do curso de Sistemas de Informação
-									pela Faculdade Impacta.
-									<br/><br/>
-									<b>Django, Python, HTML, CSS e SQLite</b>
-								</p>
-								
-								<span>Clique para ver mais</span>
-							</div>
-							<div class="card_face card_back">
-								<p class="p_back">
-									O sistema LMS é uma plataforma de aprendizado, onde existem 3 perfis, Coordenadores, Professores e Alunos. Nesta plataforma
-									o aluno pode aprender com aulas e exercícios publicados pelo Professor, que irá corrigir e dar nota para os alunos de acordo
-									com suas respostas. Enquanto isso o coordenador poderá cadastrar turmas, alunos, professores e fazer toda a manutenção da plataforma.
-									Minha versão do sistema contempla todas essas funcionalidades, exceto o gerenciamento de notas, e ainda inclui Avisos e Mensagens,
-									além da honra em ter recebido nota máxima pelos professores avaliadores.
-									<br/><br/>
-									<b class="smart_leg">Django, Python, HTML, CSS e SQLite</b>
-								</p>
-								<a href="http://tabelacopa.azurewebsites.net" target="_blank">
-									Github
-								</a>
+						
+						<div class="card_scene">
+							<div class="card">
+								<div class="card_face card_front">
+									<h5>Tabela Copa</h5>
+									
+									<p class="p_front">
+										Sistema Web para gravar informações das partidas na copa do mundo de 2018. Projeto realizado apenas para fins
+										de aprendizado, com o principal intuíto de facilitar a gravação dos resultados da copa com um sistema feito por mim.
+										<br/><br/><b>Django, Python, HTML, CSS e SQLServer</b>
+									</p>
+									
+									<span>Clique para ver mais</span>
+								</div>
+								<div class="card_face card_back">
+									<p class="p_back pc">
+										Este projeto surgiu da vontade em aprender. Nesta copa, assim como nas outras, a tabela em papel é algo que muitas
+										pessoas usam para gravar os resultados, pois é algo divertido ir assistindo às partidas e marcando os resultados você
+										mesmo. Um problema nessa abordagem é que podemos perder o papel, ele pode estragar, entre diversos problemas. Partindo
+										desse principio pensei em fazer o mesmo sistema digitalizado, onde qualquer um pode acessar em qualquer lugar, a qualquer hora.
+										(<b>Sistema em construção, ainda tenho alguns planos futuros</b>)
+										<br/><br/><b class="smart_leg">Django, Python, HTML, CSS e SQLServer</b>
+									</p>
+									<p class="p_back tiny">
+										Projeto realizado para o aprendizado. A idéia era trazer pro mundo digital as tabelas da copa que eram feitas em papel.
+									</p>
+									<a href="http://tabelacopa.azurewebsites.net" target="_blank">
+										Tabela Copa
+									</a>
+								</div>
 							</div>
 						</div>
+						
+						<div class="card_scene">
+							<div class="card">
+								<div class="card_face card_front">
+									<h5>Sistema LMS</h5>
+									
+									<p class="p_front">
+										Sistema LMS (Learning Management System) realizado como avaliação para o segundo semestre do curso de Sistemas de Informação
+										pela Faculdade Impacta.
+										<br/><br/>
+										<b>Django, Python, HTML, CSS e SQLite</b>
+									</p>
+									
+									<span>Clique para ver mais</span>	
+								</div>
+								<div class="card_face card_back">
+									<p class="p_back pc">
+										O sistema LMS é uma plataforma de aprendizado, onde existem 3 perfis, Coordenadores, Professores e Alunos. Nesta plataforma
+										o aluno pode aprender com aulas e exercícios publicados pelo Professor, que irá corrigir e dar nota para os alunos de acordo
+										com suas respostas. Enquanto isso o coordenador poderá cadastrar turmas, alunos, professores e fazer toda a manutenção da plataforma.
+										Minha versão do sistema contempla todas essas funcionalidades, exceto o gerenciamento de notas, e ainda inclui Avisos e Mensagens,
+										além da honra em ter recebido nota máxima pelos professores avaliadores.
+										<br/><br/>
+										<b class="smart_leg">Django, Python, HTML, CSS e SQLite</b>
+									</p>
+									<p class="p_back tiny">
+										O sistema LMS é uma plataforma de aprendizado. Onde o estudante pode ir acompanhando seu progresso, seus resultados e tudo mais.
+									</p>
+									</p>
+									<a href="http://tabelacopa.azurewebsites.net" target="_blank">
+										Github
+									</a>
+								</div>
+							</div>
+						</div>
+						
 					</div>
+
+					<div lang="en" class="projects_box_pt" style="display: none">
+
+						<div class="card_scene">
+							<div class="card">
+								<div class="card_face card_front">
+									<h5>SGE Hookah</h5>
+
+									<p class="p_front">
+										Enterprise Resource Planning system focused in shisha tobacco. This project is part of Entreprise Project Workshop of Impacta college. <br/><br/><b>Django, Python, HTML, CSS, JS, PostgreSQL</b>
+									</p>
+									
+									<span>Click card to see more</span>
+								</div>
+								<div class="card_face card_back">
+									<p class="p_back pc">
+										This project, besides being part of my college graduation, it's based on a real problem of a client. Our client wants to invest in the shisha business as a producer and seller of shisha flavors (tobacco). It is an unusual business branch, and because this he needed a specialized system, the actual systems in the market couldn't fit his needs, so we are using the best development methods to give the client an professional and stable system.
+										<br/><br/>
+										<b class="smart_leg">Django, Python, HTML, CSS, JS, PostgreSQL</b>
+									</p>
+									<p class="p_back tiny">
+										ERP voltado para fabricação de essências de narguilé. Feito em Django, Python, HTML, CSS, JS, PostgreSQL.
+									</p>
+									<a href="https://github.com/SpaceTheArcher/SGEHookah" target="_blank">
+										Github
+									</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card_scene">
+							<div class="card">
+								<div class="card_face card_front">
+									<h5>Tabela Copa</h5>
+									
+									<p class="p_front">
+										Web App to record informations about the 2018 World Cup matches. Project made for studying, with the intention of facilitate the annotations of the world cup results with a system made by myself.
+										<br/><br/><b>Django, Python, HTML, CSS and SQLServer</b>
+									</p>
+									
+									<span>Click card to see more</span>
+								</div>
+								<div class="card_face card_back">
+									<p class="p_back pc">
+										This project came in from the will of learning. Usually on the World Cup there's a schedule made with paper with no results, so the person itself fills in. There are many problems in this method, like loosing the paper. Thinking about these I came with the idea of making this system, where anyone can access anywhere, anytime.
+										(<b>Under development</b>)
+										<br/><br/><b class="smart_leg">Django, Python, HTML, CSS and SQLServer</b>
+									</p>
+
+									<p class="p_back tiny">
+										Project made for learning. The main idea was to bring to the digital world the world cup schedules where the person fill the results.
+									</p>
+									<a href="http://tabelacopa.azurewebsites.net" target="_blank">
+										Tabela Copa
+									</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card_scene">
+							<div class="card">
+								<div class="card_face card_front">
+									<h5>Sistema LMS</h5>
+									
+									<p class="p_front">
+										Learning Management System (LMS) made as evaluation for the second semester of Systems of Information course on Impacta college.
+										<br/><br/>
+										<b>Django, Python, HTML, CSS and SQLite</b>
+									</p>
+									
+									<span>Click card to see more</span>	
+								</div>
+								<div class="card_face card_back">
+									<p class="p_back pc">
+										The Learning Management System is a learning platform with different profiles (Managers, Teachers, Students), where the teacher can send and evaluate the students by sending tests and questions, and students can answer them and track his progress. In my system theres a grade management, messages and warnings. Also I could have the honor of receiving the maximum grade by the teachers.
+										<br/><br/>
+										<b class="smart_leg">Django, Python, HTML, CSS and SQLite</b>
+									</p>
+									<p class="p_back tiny">
+										The Learning Management System is a learning platform with different profiles (Managers, Teachers, Students), where the teacher can send and evaluate the students by sending tests and questions, and students can answer them and track his progress.
+									</p>
+									</p>
+									<a href="http://tabelacopa.azurewebsites.net" target="_blank">
+										Github
+									</a>
+								</div>
+							</div>
+						</div>
 								
 					</div>
 				
@@ -295,7 +399,7 @@
 						</h4>
 					</div>
 					
-					<div id="media_container_pt" class="media_container_pt">
+					<div lang="pt" class="media_container_pt">
 						<div class="media_box">
 							
 								<div class="media_it">
@@ -323,7 +427,7 @@
 						</div>
 					</div>
 					
-					<div id="media_container_en" class="media_container_en">
+					<div lang="en" class="media_container_en">
 						<div class="media_box">
 							
 							<div class="media_wrapper">
@@ -341,7 +445,7 @@
 								</div>
 								
 								<div class="media_it media_it_margin">
-									Follow me on social medias :
+									<span>Follow me on social medias :</span>
 								</div>
 								
 								<div class="social_medias">
@@ -359,6 +463,7 @@
 		
 		</div>
 		<script src="js/fix_bar.js"></script>
+		<script src="js/cards.js"></script>
 	</body>
 
 </html>

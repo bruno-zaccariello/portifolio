@@ -10,19 +10,14 @@ function scrollMagic() {
 		var janela = $(window).scrollTop()
 		var posTop = $(this).offset().top - 400;
 		var posBottom = posTop + $(this).outerHeight(true);
-		if (janela >= posTop && janela <= posBottom + 200) {
-			$(this).children('section').fadeIn(1000);
-		} else if (janela >= posBottom) {
-			$(this).children('section').fadeOut(1000);
-		} else {
-			$(this).children('section').fadeOut(1000);
+		if ($('#lock_scroll').hasClass('unlock')) {
+			if (janela >= posTop && janela <= posBottom + 200) {
+				$(this).children('section').fadeIn(1000);
+			} else if (janela >= posBottom) {
+				$(this).children('section').fadeOut(1000);
+			} else {
+				$(this).children('section').fadeOut(1000);
+			}
 		}
 	});
 }
-
-$('.card').each(function() {
-	$(this).click(function() {
-		$(this).toggleClass('is-flipped');
-		$(this).parent().toggleClass('is-flipped');
-	})
-})
